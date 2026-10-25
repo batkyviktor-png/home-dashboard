@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <title>Otthoni Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">OTTHONI ÁTTEKINTÉS</div>
+        <h1>Tatabánya</h1>
+      </div>
+      <div class="clock-block">
+        <div id="clock" class="clock">--:--</div>
+        <div id="today" class="muted">Betöltés…</div>
+      </div>
+    </header>
+
+    <section class="weather-section panel">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">HELYI IDŐJÁRÁS</div>
+          <h2>Időjárás</h2>
+        </div>
+        <span id="weather-updated" class="muted">Betöltés…</span>
+      </div>
+
+      <div class="current-weather">
+        <div class="current-icon" id="current-icon">⛅</div>
+        <div>
+          <div id="current-temp" class="current-temp">--°</div>
+          <div id="current-description" class="muted">Időjárási adatok betöltése</div>
+        </div>
+        <div class="weather-facts">
+          <div><span>💨 Szél</span><strong id="current-wind">-- km/h</strong></div>
+          <div><span>🌧️ Csapadék</span><strong id="current-rain">-- mm</strong></div>
+          <div><span>💧 Páratartalom</span><strong id="current-humidity">--%</strong></div>
+        </div>
+      </div>
+
+      <div id="forecast" class="forecast-grid">
+        <div class="muted">Előrejelzés betöltése…</div>
+      </div>
+      <div class="source-note">Időjárás: Open-Meteo</div>
+    </section>
+
+    <section class="market-grid">
+      <article class="panel market-card">
+        <div class="eyebrow">DEVIZA</div>
+        <h2>EUR / HUF</h2>
+        <div id="eur-huf" class="market-value">-- Ft</div>
+        <div id="eur-updated" class="muted">Árfolyam betöltése…</div>
+        <div class="market-symbol">€</div>
+      </article>
+
+      <article class="panel market-card doge-card">
+        <div class="eyebrow">KRIPTOVALUTA</div>
+        <h2>Dogecoin</h2>
+        <div id="doge-huf" class="market-value">-- Ft</div>
+        <div id="doge-usd" class="muted">DOGE árfolyam betöltése…</div>
+        <div class="market-symbol">Ð</div>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel calendar-panel">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">PROGRAMOK</div>
+            <h2>Google Calendar</h2>
+          </div>
+          <span class="panel-icon">▦</span>
+        </div>
+        <div id="calendar-events" class="event-list">
+          <div class="muted">Naptáresemények betöltése…</div>
+        </div>
+        <a class="text-link" href="https://calendar.google.com/" target="_blank" rel="noopener">
+          Naptár megnyitása ↗
+        </a>
+      </article>
+
+      <article class="panel photos-panel">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">EMLÉKEK</div>
+            <h2>Google Photos</h2>
+          </div>
+          <span class="panel-icon">▧</span>
+        </div>
+        <div class="photos-art">
+          <div class="photo-sun"></div>
+          <div class="photo-hill hill-one"></div>
+          <div class="photo-hill hill-two"></div>
+          <div class="photo-caption">A kedvenc pillanatok</div>
+        </div>
+        <p class="muted photos-description">
+          Nyisd meg a családi albumot a Google Fotókban.
+        </p>
+        <a id="photos-link" class="primary-link"
+           href="https://photos.google.com/" target="_blank" rel="noopener">
+          Google Photos megnyitása ↗
+        </a>
+      </article>
+    </section>
+
+    <footer>
+      <span>HOME DASHBOARD</span>
+      <span id="last-updated">Adatok frissítése…</span>
+    </footer>
+  </main>
+</body>
+</html>
