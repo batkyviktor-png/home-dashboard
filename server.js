@@ -44,14 +44,14 @@ app.get("/api/calendar.ics", async (req, res) => {
   }
 });
 
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
-});
+app.use((req, res, next) => {
+  if (req.path.startsWith("/api/")) {
+    return next();
+  }
 
-app.get("*", (req, res, next) => {
-  if (req.path.startsWith("/api/")) return next();
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Dashboard running on port ${PORT}`);
