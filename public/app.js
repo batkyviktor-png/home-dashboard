@@ -8,7 +8,7 @@
  */
 
 const CONFIG = {
-  photosAlbumUrl: "https://photos.google.com/",
+  photosAlbumUrl: "https://photos.app.goo.gl/L5uqmad2uirLZraH7/",
   latitude: 47.586,
   longitude: 18.394,
   timezone: "Europe/Budapest"
