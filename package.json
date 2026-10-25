@@ -1,0 +1,17 @@
+
+{
+  "name": "home-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DAKboard-style home dashboard for Tatabanya",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
